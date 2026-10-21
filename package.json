@@ -1,0 +1,48 @@
+{
+  "name": "fullstack-skills",
+  "version": "1.0.0",
+  "description": "Production CLI to install full-stack AI coding-agent skills into projects",
+  "type": "module",
+  "bin": {
+    "fullstack-skills": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "skills",
+    "claude",
+    "codex",
+    "fullstack",
+    "coding-agent",
+    "agent-skills",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^13.1.0",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.6"
+  }
+}
