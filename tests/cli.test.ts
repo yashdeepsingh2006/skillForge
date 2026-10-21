@@ -29,8 +29,9 @@ describe('CLI Execution & Argument Parsing', () => {
     expect(stdout).toContain('backend');
     expect(stdout).toContain('database');
     expect(stdout).toContain('frontend');
+    expect(stdout).toContain('testing');
     expect(stdout).toContain('UIUX');
-    expect(stdout).toContain('Summary: 4 installed, 0 skipped, 0 failed');
+    expect(stdout).toContain('Summary: 5 installed, 0 skipped, 0 failed');
   });
 
   it('lists discovered bundled skills with list command', async () => {
@@ -39,6 +40,7 @@ describe('CLI Execution & Argument Parsing', () => {
     expect(stdout).toContain('backend');
     expect(stdout).toContain('database');
     expect(stdout).toContain('frontend');
+    expect(stdout).toContain('testing');
     expect(stdout).toContain('UIUX');
   });
 
