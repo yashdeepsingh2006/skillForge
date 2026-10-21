@@ -1,6 +1,6 @@
 {
   "name": "skillforge-skills",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Production CLI to install full-stack AI coding-agent skills into projects",
   "type": "module",
   "bin": {

@@ -35,13 +35,14 @@ Skills provide structured, best-practice instructions that AI coding assistants 
 
 ## Bundled Skills
 
-The package comes pre-packaged with 5 general-purpose full-stack development skills:
+The package comes pre-packaged with 6 general-purpose full-stack development skills:
 
 | Skill | Name | Description |
 | :--- | :--- | :--- |
 | **Frontend Architecture** | `frontend` | Component-based modular architecture, component reusability (DRY audit), strict separation of business logic (hooks/services/utils), zero-emoji policy, and Bootstrap Icons standard. |
 | **Backend & Systems** | `backend` | Feature-modular architecture, zero-trust input validation (runtime schemas), Data Access Layer (DAL/Repository pattern), singleton DB pools, and deterministic API envelopes. |
 | **Database & Modeling** | `database` | 3NF schema design, strict data types, explicit constraints & referential actions, foreign key indexing, short ACID transaction boundaries, and zero-downtime migrations. |
+| **Software Documentation** | `docs` | Master specification for software documentation across the SDLC (requirements, architecture, API, user manuals, deployment, and compliance). |
 | **Test Automation & QA** | `testing` | Specification-based black-box testing (Equivalence Partitioning, Boundary Value Analysis, truth tables), white-box control flow coverage, and mutation testing. |
 | **UI/UX & Agent Experience** | `UIUX` | Human cognition principles (safe exploration, satisficing, habituation), information architecture (MECE/LATCH), visual hierarchy, and Agent Experience (AX) semantic DOM optimization. |
 
