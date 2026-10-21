@@ -34,7 +34,7 @@
     "agent-skills",
     "cli"
   ],
-  "author": "",
+  "author": "Yashdeep singh",
   "license": "MIT",
   "dependencies": {
     "commander": "^13.1.0",
