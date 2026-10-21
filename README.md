@@ -1,10 +1,10 @@
-# fullstack-skills
+# skillforge-skills
 
 A minimal, production-grade npm CLI package for installing agent-agnostic full-stack AI coding skills directly into your current project.
 
 Skills provide structured, best-practice instructions that AI coding assistants (such as **Google Antigravity**, **Claude Code**, **OpenAI Codex**, and standard-compliant agent runtimes) load dynamically on demand.
 
-> **Project-Only Guarantee**: `fullstack-skills` installs skills **strictly into the target project root**. It will **never** write to your home directory (`~`) or global agent configuration paths.
+> **Project-Only Guarantee**: `skillforge-skills` installs skills **strictly into the target project root**. It will **never** write to your home directory (`~`) or global agent configuration paths.
 
 ---
 
@@ -15,11 +15,11 @@ Skills provide structured, best-practice instructions that AI coding assistants 
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [CLI Commands & Options](#cli-commands--options)
-  - [`import [skill-name]`](#fullstack-skills-import-skill-name)
-  - [`install`](#fullstack-skills-install)
-  - [`add <skill-name>`](#fullstack-skills-add-skill-name)
-  - [`list`](#fullstack-skills-list)
-  - [`uninstall [skill-name]`](#fullstack-skills-uninstall-skill-name)
+  - [`import [skill-name]`](#skillforge-skills-import-skill-name)
+  - [`install`](#skillforge-skills-install)
+  - [`add <skill-name>`](#skillforge-skills-add-skill-name)
+  - [`list`](#skillforge-skills-list)
+  - [`uninstall [skill-name]`](#skillforge-skills-uninstall-skill-name)
 - [Supported Agent Providers](#supported-agent-providers)
   - [Google Antigravity](#google-antigravity-antigravity)
   - [Claude Code](#claude-code-claude-code)
@@ -51,7 +51,7 @@ The package comes pre-packaged with 4 general-purpose full-stack development ski
 - **Project Scoped**: Automatically detects your project root (via `package.json`, `.git`, etc.) or accepts `--project-dir <path>`. Never pollutes global user configs.
 - **Multi-Agent Providers**: Out-of-the-box support for **Google Antigravity** (`.agents/skills`), **Claude Code** (`.claude/skills`), **OpenAI Codex** (`.codex/skills`), and **Universal Agent Skills** (`.agents/skills`).
 - **Dynamic Skill Discovery**: Skills are discovered dynamically at runtime from the `skills/` directory—no hardcoded registries.
-- **Import All or Selected**: Single command (`fullstack-skills import` or `fullstack-skills install`) imports all skills in one shot.
+- **Import All or Selected**: Single command (`skillforge-skills import` or `skillforge-skills install`) imports all skills in one shot.
 - **Package-Owned Manifest**: Tracks all installed files with SHA-256 hashes (`.fullstack-skills-manifest.json`) for safe idempotency and non-destructive uninstallation.
 - **Zero Accidental Overwrites**: Warns and skips if destination files exist or have been modified by the developer, requiring explicit `--force` to overwrite.
 - **Preserves Unrelated Skills**: Uninstallation only touches package-managed files, preserving team-authored skills and custom configurations.
@@ -64,14 +64,14 @@ The package comes pre-packaged with 4 general-purpose full-stack development ski
 Run directly with `npx` (no prior installation needed):
 
 ```bash
-npx fullstack-skills <command>
+npx skillforge-skills <command>
 ```
 
 Or install locally in your project:
 
 ```bash
-npm install -D fullstack-skills
-npx fullstack-skills --help
+npm install -D skillforge-skills
+npx skillforge-skills --help
 ```
 
 ---
@@ -80,48 +80,48 @@ npx fullstack-skills --help
 
 ```bash
 # 1. View all available bundled skills and current project installation status
-npx fullstack-skills list
+npx skillforge-skills list
 
 # 2. Import ALL skills into the current project (auto-detects agent)
-npx fullstack-skills import
+npx skillforge-skills import
 
 # 3. Import specifically for Google Antigravity
-npx fullstack-skills import --agent antigravity
+npx skillforge-skills import --agent antigravity
 
 # 4. Import a single skill
-npx fullstack-skills import frontend
+npx skillforge-skills import frontend
 
 # 5. Preview changes without writing to disk
-npx fullstack-skills import --dry-run
+npx skillforge-skills import --dry-run
 
 # 6. Safely remove a skill (preserves user-edited files unless --force is given)
-npx fullstack-skills uninstall frontend --yes
+npx skillforge-skills uninstall frontend --yes
 ```
 
 ---
 
 ## CLI Commands & Options
 
-### `fullstack-skills import [skill-name]`
+### `skillforge-skills import [skill-name]`
 
 **Imports skills into your current project.**
 If no `skill-name` is provided, **all available skills** are imported. If a `skill-name` is provided, only that specific skill is imported.
 
 ```bash
 # Import all skills (auto-detects agent)
-fullstack-skills import
+skillforge-skills import
 
 # Import all skills for Google Antigravity
-fullstack-skills import --agent antigravity
+skillforge-skills import --agent antigravity
 
 # Import all skills for Claude Code
-fullstack-skills import --agent claude-code
+skillforge-skills import --agent claude-code
 
 # Import all skills for OpenAI Codex
-fullstack-skills import --agent codex
+skillforge-skills import --agent codex
 
 # Import a single skill
-fullstack-skills import backend
+skillforge-skills import backend
 ```
 
 **Options:**
@@ -132,12 +132,12 @@ fullstack-skills import backend
 
 ---
 
-### `fullstack-skills install`
+### `skillforge-skills install`
 
-Installs all available skills from the package registry into the current project (equivalent to `fullstack-skills import`).
+Installs all available skills from the package registry into the current project (equivalent to `skillforge-skills import`).
 
 ```bash
-fullstack-skills install [options]
+skillforge-skills install [options]
 ```
 
 **Options:**
@@ -148,13 +148,13 @@ fullstack-skills install [options]
 
 ---
 
-### `fullstack-skills add <skill-name>`
+### `skillforge-skills add <skill-name>`
 
 Installs a single skill by its name into the project.
 
 ```bash
-fullstack-skills add frontend
-fullstack-skills add backend --agent antigravity
+skillforge-skills add frontend
+skillforge-skills add backend --agent antigravity
 ```
 
 **Options:**
@@ -165,12 +165,12 @@ fullstack-skills add backend --agent antigravity
 
 ---
 
-### `fullstack-skills list`
+### `skillforge-skills list`
 
 Displays all discovered skills in the package registry and checks their installation status within the current project.
 
 ```bash
-fullstack-skills list [options]
+skillforge-skills list [options]
 ```
 
 **Status Indicators:**
@@ -180,16 +180,16 @@ fullstack-skills list [options]
 
 ---
 
-### `fullstack-skills uninstall [skill-name]`
+### `skillforge-skills uninstall [skill-name]`
 
 Safely removes one named skill or all managed skills from the current project.
 
 ```bash
 # Remove one skill
-fullstack-skills uninstall frontend --yes
+skillforge-skills uninstall frontend --yes
 
 # Remove all managed skills
-fullstack-skills uninstall --yes
+skillforge-skills uninstall --yes
 ```
 
 **Options:**

@@ -9,7 +9,7 @@ const CLI_PATH = path.resolve(__dirname, '../dist/cli.js');
 describe('CLI Execution & Argument Parsing', () => {
   it('outputs help text with --help including import command', async () => {
     const { stdout } = await execFileAsync('node', [CLI_PATH, '--help']);
-    expect(stdout).toContain('fullstack-skills');
+    expect(stdout).toContain('skillforge-skills');
     expect(stdout).toContain('install');
     expect(stdout).toContain('import');
     expect(stdout).toContain('<skill-name>');

@@ -1,10 +1,11 @@
 {
-  "name": "fullstack-skills",
+  "name": "skillforge-skills",
   "version": "1.0.0",
   "description": "Production CLI to install full-stack AI coding-agent skills into projects",
   "type": "module",
   "bin": {
-    "fullstack-skills": "./dist/cli.js"
+    "skillforge-skills": "dist/cli.js",
+    "fullstack-skills": "dist/cli.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

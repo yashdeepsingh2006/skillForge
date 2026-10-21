@@ -28,9 +28,9 @@ async function main(): Promise<void> {
   const program = new Command();
 
   program
-    .name('fullstack-skills')
+    .name('skillforge-skills')
     .description('Install agent-agnostic full-stack AI coding-agent skills into your project')
-    .version(version, '-v, --version', 'Output the current version of fullstack-skills');
+    .version(version, '-v, --version', 'Output the current version of skillforge-skills');
 
   program
     .command('install')

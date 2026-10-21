@@ -74,7 +74,7 @@ export async function updateManifestRecord(
 ): Promise<ManifestData> {
   const current = (await readManifest(projectRoot)) ?? {
     schemaVersion: MANIFEST_SCHEMA_VERSION,
-    installedBy: `fullstack-skills@${packageVersion}`,
+    installedBy: `skillforge-skills@${packageVersion}`,
     updatedAt: new Date().toISOString(),
     skills: {},
   };
